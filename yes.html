@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Messages</title>
+    <style>
+        body {
+            font-family: 'Sign Painter', cursive;
+            font-size: 30px;
+            margin: 0 90px;
+            background-image: url("file:///D:/KAYLI/School/GRADE%2010/ENGLISH/PARA.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #inputDiv {
+            text-align: center;
+            margin-bottom: 20px;
+	}
+	#name, button {
+	    width: 30%;
+	    font-size: 30px;
+        }
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="inputDiv">
+        <label for="name">Enter your name: </label>
+        <input type="text" id="name" name="name">
+        <button onclick="showMessage()">Submit</button>
+    </div>
+    <div id="message"></div>
+
+    <script>
+        const messages = {
+            Jason: "LOE PRI! Sana next time gamitin mo ung chat gpt sa tamang paraan. Mas naging better ka ngayon kesa dating Jason na manhid at walang pakelam sa mundo (nonchalant yern) pero thanks for this year!",
+            David: "HI MATU!! Just want to say thank you sa pagiging mood booster ng room, naaappreciate ko ‘yon. Bawas bawasan mo rin pangongopya haaa HAHAHAHAHAHA. Minsan yung joke mo over boundaries na pero I’m grateful na naging classmate and friend kitaaa. Thank you for this memorable school year!",
+            John: "ELLISEOOOO! Sorry nasisigawan ko u lagi and napapagalitannn. But thank you kasi napapatawa mopa rin ako kahit nakakainis or corny yung jokes mo HAHAHAHAHHAHA. Mahal na mahal ka ni lord alam mo yan. Anyways, mamimiss ko pamimikon mo sakin!",
+            Edward: "KAP!! THANK YOU SA LAHAT NG HELP AND PAGPAPATAWA MO SA’MIN! MAMIMISS KO UNG INIS MONG NAKAKATAWA FOR US AHHAHAHAHAAHAHAH. Tho minsan napapagalitan ko u hehe sorry. But thanks for this year!! I’m grateful na naging klasmet ko uuu<3",
+            Kennette: "hi kennette!! Sorry if naiinis or napapagalitan kita minsan. But thank you sa mga helps mo! Remember na its okay to be a cry baby but learn how to fight pa rin okay? Stay strong!!",
+            Eril: "ERILRONLUWI! Rant buddyyy! Mamimiss ko ung pagrereklamo mo sa grades mo! Alam kong deserve mo ‘yon umpisa pa lang pero next time, ipakita mo sakanila na kaya mo talaga at hindi na kailangan ipagdalawang isip kung ano yung para sayo. Stay strong sainyooo and looking forward for more achievements na makukuha mo, proud em sayo!! I’m grateful na naging kaklase kita, thanks for making this school year memorable!",
+            Kurt: "TOLLEDS MY ENGLISH BUDDY!! Miss na kita katabi HAHHAHAHAHAHA our school supplies classmate. Thank you sa pag share ng things mo! Wala ka nang maririnig na “TOLLEDOOO PAHIRAM GUNTING” Sobrang big help ka and ung efforts mo nung sabayang pagbigkas, sobrang thank you<3 Thank you sa all!",
+            Christine: "ATE KOH!! Pers op ol, keme! Sorry if minsan nasusungitan ko uuuu heheh. But thank you kasi ikaw lagi napapagsabihan ko when it comes sa luvlayf WOAH AHAHAHAHAHAHA. Diko ineexpect na mas makakaclose kita kung kelan patapos na school year ue ue! WAG KA IIYAK AH AHAHHAAHHA mag move on na tayo charet. Thank you soaper sayo dami kong natutunan and very appreciated ka! LUV U"
+        };
+
+        function showMessage() {
+            const nameInput = document.getElementById("name").value;
+            const messageDiv = document.getElementById("message");
+
+            if (messages[nameInput]) {
+                messageDiv.textContent = messages[nameInput];
+            } else {
+                messageDiv.textContent = "Name not recognized. Please enter a valid name.";
+            }
+            document.getElementById("inputDiv").style.display = "none";
+        }
+    </script>
+</body>
+</html>
